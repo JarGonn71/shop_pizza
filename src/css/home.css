@@ -1,0 +1,37 @@
+.container--home{
+    /*display: grid;*/
+    height: 100%;
+    width: 100%;
+    /*display: grid;*/
+    /*grid-template-columns: 1fr;*/
+    /*grid-template-rows: 5% 95%;*/
+
+}
+
+.home-navbar{
+    display: grid;
+    grid-template-columns: 80% 20%;
+    margin-bottom: 50px;
+}
+
+.home-content{
+
+}
+
+
+.content__items{
+    height: 95%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 20px;
+    grid-gap: 50px;
+    justify-items: center;
+    align-items: center;
+
+}
+
+
+.content__title{
+    margin-bottom: 50px;
+}
+

@@ -1,0 +1,170 @@
+.background{
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,0.4);
+    position: fixed;
+    top:0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+
+.WindowContainer-wrapper{
+    width: 600px;
+    height: 400px;
+    padding: 20px;
+    border-radius: 12px;
+    background: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    opacity: 0;
+    z-index: 10000;
+    transition: .3s ease-in-out;
+    transform: scale(0.5);
+}
+
+.WindowContainer-wrapper.active{
+    opacity: 1;
+    transform: scale(1);
+}
+
+.modal_image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+
+.pizza-image{
+   transition: .3s ease-in-out;
+    user-select: none;
+}
+
+.pizza-image.little{
+    width: 70%;
+    transition: .3s ease-in-out;
+}
+
+.pizza-image.middle{
+    width: 85%;
+    transition: .3s ease-in-out;
+}
+
+.pizza-image.big{
+    width: 100%;
+    transition: .3s ease-in-out;
+}
+
+.modal_info{
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    grid-template-rows: 85% 15%;
+}
+
+.wrapper-info{
+    position: absolute;
+    inset: 0px;
+    overflow: scroll;
+    margin-right: -17px;
+    margin-bottom: -17px;
+    padding-bottom: 70px;
+}
+
+.modal_title{
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.wrapper-info p{
+    opacity: 0.6;
+}
+
+.title-additive{
+    margin-bottom: 10px;
+    text-align: left;
+    color: black;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.wrapper-additive{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 8px;
+}
+
+.additive-item{
+    cursor: pointer;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.additive-item.active{
+    border: 2px solid  #ee5c02;
+
+
+}
+
+.ActiveIcon{
+    position: absolute;
+    right: 5%;
+    top: 5%;
+}
+
+.additive-image{
+    user-select: none;
+    width: 100%;
+}
+.additive-title{
+    user-select: none;
+}
+.additive-price{
+    user-select: none;
+}
+
+.modal-wrapper-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background: white;
+    z-index: 30;
+}
+
+.modal-button{
+    user-select: none;
+    width: 80%;
+    padding: 10px;
+    border-radius: 30px;
+    background: #ee5c02;
+    cursor: pointer;
+    color: white;
+    font-weight: 600;
+    transition: .1s ease-in-out;
+
+}
+
+.modal-button:active{
+    color: #a1a1a1;
+    transform: scale(.9);
+}
+
+.button--close{
+    right: -6%;
+    transform: rotate(45deg);
+    position: absolute;
+    cursor: pointer;
+    transition: .1s ease-in-out;
+}
+
+.button--close:hover{
+    transform: rotate(45deg) scale(1.1);
+}

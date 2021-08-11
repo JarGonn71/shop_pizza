@@ -1,0 +1,206 @@
+.pizza-block{
+    width: 240px;
+    text-align: center;
+    animation: showBlock 1s;
+}
+
+@keyframes showBlock {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+
+}
+
+.fail{
+    background: #a1a1a1;
+    border-radius: 21px;
+}
+.wrapper--image{
+    user-select: none;
+    transition: .5s ease-in-out;
+}
+
+.wrapper--image:hover{
+    transform: translateY(-5px);
+}
+
+.pizza-block__image{
+    user-select: none;
+    width: 200px;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+}
+
+.pizza-block__title{
+    margin: 0;
+    font-weight: bold;
+    font-size: 20px;
+    height: 45px;
+}
+
+.pizza-block__selector{
+    margin: 10px 0px;
+    background: #d1d1d1;
+    border-radius: 10px;
+    padding: 5px;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-row-gap: 5px;
+}
+
+.pizza-block__type{
+    margin: 0;
+    padding: 0px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.pizza-block__size{
+    margin: 0;
+    padding: 0px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.pizza-block__selector li{
+    cursor: pointer;
+    list-style-type: none;
+    padding: 5px 15px;
+
+    border-radius: 10px;
+}
+
+.pizza-block__selector .active{
+    background: #fffdfd;
+}
+
+.pizza-block__selector .disable{
+   opacity: 0.5;
+    pointer-events: none;
+}
+
+.pizza-block__bottom{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.pizza-block__price{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 21px;
+    font-weight: bold;
+}
+
+.button{
+    user-select: none;
+    position: relative;
+    cursor: pointer;
+    width: 130px;
+    border-radius: 30px;
+    border: 2px solid #ee5c02;
+    transition: .1s ease-in-out;
+}
+
+.button:active{
+    color: #a1a1a1;
+    transform: scale(.9);
+}
+
+
+.button--cart{
+    cursor: pointer;
+    background: chocolate;
+    height: 50px;
+    min-width: 140px;
+    width: auto;
+    border-radius: 30px;
+    padding: 0px 10px;
+    display: grid;
+    grid-template-columns: 1fr 5px 60px;
+    grid-column-gap: 8px;
+    align-items: center;
+    transition: .2s  ease-in-out;
+
+}
+
+.button--cart:hover{
+    transform: translateY(-5px);
+}
+
+.button--cart:active{
+    color: #a1a1a1;
+    transform: translateY(-5px) scale(.9);
+}
+
+.button.button--add{
+    display: grid;
+    grid-template-columns: 10% 90%;
+    color: #ee5c02;
+    padding: 5px;
+    font-weight: bold;
+    transition: .5s ease-in-out;
+}
+
+
+.button.button--add:hover{
+    background: linear-gradient(to right, #c02425, #f0cb35);
+
+}
+
+.button.button--add svg{
+    opacity: 0;
+    transform: scale(0.5);
+    transition: .2s ease-in-out;
+    margin-left: 5px;
+}
+
+.button.button--add:hover svg{
+    fill: white;
+    opacity: 1;
+    transform: scale(1);
+
+}
+.button--text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5px;
+}
+
+.button.button--add:hover .button--text{
+    color: white;
+
+}
+
+.button--count{
+    position: absolute;
+    width: 25px;
+    height: 100%;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: .2s ease-in-out;
+    right: 0;
+}
+
+.button.button--add:hover .button--count{
+    color: white;
+    opacity: 1;
+    right: 5px;
+
+
+}
+
+
+
+
+
+

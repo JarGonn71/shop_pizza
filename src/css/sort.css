@@ -1,0 +1,65 @@
+.sort{
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 300px;
+
+}
+.sort__label{
+    position: relative;
+}
+.sort__label span{
+    margin-left: 10px;
+    color: chocolate;
+    border-bottom: 1px dashed chocolate;
+    cursor: pointer;
+
+}
+
+.sort__popup{
+    transition: 0.3s ease-in-out;
+    position: absolute;
+    background: #d5d2d2;
+    bottom: -100px;
+    right: 80px;
+    border-radius: 10px;
+    animation: showSort .5s;
+    z-index: 1000;
+}
+
+@keyframes showSort {
+    0%{
+        opacity: 0;
+        right: 0px;
+    }
+    100%{
+        opacity: 1;
+        right: 80px;
+    }
+}
+
+.sort__popup ul{
+    padding: 10px;
+    margin: 0;
+}
+
+.sort__popup li{
+    cursor: pointer;
+    list-style-type: none;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.sort__popup li.active{
+    color: chocolate;
+}
+
+.sort__label svg{
+    margin-right: 5px;
+    transition: .3s ease-in-out ;
+}
+
+.sort__label .rotated{
+
+    transform: rotate(180deg);
+}

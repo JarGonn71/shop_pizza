@@ -1,0 +1,38 @@
+.container--category{
+    display: flex;
+    align-items: center;
+}
+.caregory-items{
+    display: flex;
+    margin: 0;
+    position: relative;
+    padding: 0px;
+    /*justify-content: space-between;*/
+}
+.caregory--line{
+    position: absolute;
+    background: black;
+    width: 55px;
+    left: 0px;
+    height: 100%;
+    transition: 0.5s ease-in-out;
+    border-radius: 15px;
+
+}
+.item{
+    cursor: pointer;
+    padding: 10px 15px;
+    list-style-type: none;
+    border-radius: 20px;
+    text-align: center;
+    margin-right: 10px;
+    font-weight: 600;
+    transition: .5s ease-in-out ;
+    z-index: 2;
+}
+
+.item.active{
+    /*background: black;*/
+    color: white;
+    transition: .5s ease-in-out ;
+}
