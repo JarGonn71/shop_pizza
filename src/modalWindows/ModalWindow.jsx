@@ -26,7 +26,7 @@ const ModalWindow = memo(function ModalWindow({id, imageUrl, name, prices, sizes
 
 
     const addPizzas = () =>{
-        dispatch(addPizzasToCart({id, finalPrice, imageUrl, name , type:typesName[ActiveType], size: size, additive:activeAdditiveItems}))
+        dispatch(addPizzasToCart({id:`${id}_${ActiveType}_${size}`, finalPrice, imageUrl, name , type:typesName[ActiveType], size: size, additive:activeAdditiveItems }))
     }
 
     const callbackPrice = useCallback((type, index) => {

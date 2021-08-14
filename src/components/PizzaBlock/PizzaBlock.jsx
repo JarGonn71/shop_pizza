@@ -7,7 +7,6 @@ import {useSelector} from "react-redux";
 
 const PizzaBlock = memo(function PizzaBlock ({id, imageUrl, name, price, props} ){
     console.log('Render PizzaBlock')
-    const countPizzaToCart = useSelector(({cartReducer}) => cartReducer.items[id] )
     const [showModal, setShowModal] = useState(false)
     const openModal = () =>{
         setShowModal(prev => !prev)
@@ -33,7 +32,6 @@ const PizzaBlock = memo(function PizzaBlock ({id, imageUrl, name, price, props} 
                 <div className="button button--add " onClick={openModal}>
                     <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 16 16" height="22px" width="22px" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M8 3.5a.5.5 0 01.5.5v4a.5.5 0 01-.5.5H4a.5.5 0 010-1h3.5V4a.5.5 0 01.5-.5z" clipRule="evenodd"></path><path fillRule="evenodd" d="M7.5 8a.5.5 0 01.5-.5h4a.5.5 0 010 1H8.5V12a.5.5 0 01-1 0V8z" clipRule="evenodd"></path></svg>
                     <div className="button--text">Выбрать</div>
-                    {countPizzaToCart && <div className="button--count">{countPizzaToCart.length}</div>}
                 </div>
             </div>
 
